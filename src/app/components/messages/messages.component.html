@@ -1,0 +1,6 @@
+<div *ngIf="postService.posts.length === 0">Messages loading...</div>
+<div *ngIf="postService.posts.length > 0">
+  <div *ngFor="let post of postService.posts">
+    <app-message [message]="post.message"></app-message>
+  </div>
+</div>
