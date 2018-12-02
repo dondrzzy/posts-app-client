@@ -1,0 +1,9 @@
+<mat-form-field class="field-full-width">
+  <input
+    matInput
+    [(ngModel)]="value"
+    [name]="name"
+    [type]="type"
+    (ngModelChange)="handleChange()"
+    [placeholder]="placeholder">
+</mat-form-field>

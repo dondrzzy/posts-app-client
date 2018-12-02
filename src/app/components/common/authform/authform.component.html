@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-title>{{ formTitle }}</mat-card-title>
+  <form class="register-form">
+    <app-input
+      *ngFor="let input of inputs"
+      (changeEvent)="handleChange($event)"
+      [value]="userData.email"
+      [name]="input.name"
+      [type]="input.type"
+      [placeholder]="input.placeholder"
+    ></app-input>
+    <mat-form-field class="field-full-width" *ngIf="userData.description">
+      <textarea [(ngModel)]="userData.description" name="description" matInput placeholder="password"></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="handleSubmit()">{{ submitBtnValue }}</button>
+  </form>
+</mat-card>
