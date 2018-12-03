@@ -16,14 +16,27 @@ export class LoginComponent implements OnInit {
 
   formTitle = 'Login Form';
   submitBtnValue = 'Login';
-  userData: User = {
+  userData = {
     email: '',
     password: '',
-    name: '',
-    description: '',
   };
 
-  loginUser = ($userData: User) => {
+  inputs = [
+    {
+      name: 'email',
+      placeholder: 'email address',
+      type: 'email',
+    },
+    {
+      name: 'password',
+      placeholder: 'password',
+      type: 'password',
+    },
+  ];
+
+  loginUser = ($userData) => {
+    console.log('login data', $userData);
+    console.log('initial data', this.userData);
     this.userService.loginUser($userData);
   }
 
