@@ -57,6 +57,7 @@ export class RegisterComponent implements OnInit {
     };
   }
 
+
   registerUser($userData) {
     console.log('register data', $userData);
     console.log('initial data', this.userData);
