@@ -15,10 +15,7 @@ export class PostService {
     return this.http.get('http://localhost:3000/posts')
       .pipe(map(res => res.json()))
       .subscribe(data => {
-        setTimeout(() => {
-          this.posts = data.posts;
-        }, 3000);
-        console.log('posts', this.posts);
+        this.posts = data.posts;
       });
   }
 }

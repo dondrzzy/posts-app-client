@@ -28,9 +28,7 @@ export class AuthformComponent implements OnInit {
   }
 
   handleChange = ($event) => {
-    console.log('event', $event);
     this.userData[$event.name] = $event.value;
-    console.log('data', this.userData);
   }
 
 }
