@@ -24,8 +24,7 @@ export class AuthformComponent implements OnInit {
   @Output() submitEvent = new EventEmitter();
 
   handleSubmit = () => {
-    console.log('submitting', this.userData);
-    // this.submitEvent.emit(this.userData);
+    this.submitEvent.emit(this.userData);
   }
 
   handleChange = ($event) => {

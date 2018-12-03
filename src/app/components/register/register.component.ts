@@ -48,12 +48,22 @@ export class RegisterComponent implements OnInit {
     },
   ];
 
+  clearFormdata = () => {
+    this.userData = {
+      email: '',
+      password: '',
+      description: '',
+      name: '',
+    };
+  }
+
+
   registerUser($userData) {
     console.log('register data', $userData);
     console.log('initial data', this.userData);
     this.userService.registerUser($userData)
       .subscribe(
-        res => console.log('userRes', res),
+        res => this.clearFormdata(),
         error => console.log('s-error', error.json())
       );
   }
