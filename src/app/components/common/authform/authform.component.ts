@@ -16,32 +16,15 @@ export class AuthformComponent implements OnInit {
   @Input() userData;
   @Input() formTitle;
   @Input() submitBtnValue;
-
-  inputs = [
-    {
-      name: 'name',
-      placeholder: 'name',
-      type: 'text',
-    },
-    {
-      name: 'email',
-      placeholder: 'email address',
-      type: 'email',
-    },
-    {
-      name: 'password',
-      placeholder: 'password',
-      type: 'password',
-    },
-  ];
+  @Input() inputs;
+  @Input() textareas;
 
   value = 'ks dsds'
 
   @Output() submitEvent = new EventEmitter();
 
   handleSubmit = () => {
-    console.log('submitting', this.userData);
-    // this.submitEvent.emit(this.userData);
+    this.submitEvent.emit(this.userData);
   }
 
   handleChange = ($event) => {

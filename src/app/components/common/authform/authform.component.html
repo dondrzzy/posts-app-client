@@ -4,14 +4,18 @@
     <app-input
       *ngFor="let input of inputs"
       (changeEvent)="handleChange($event)"
-      [value]="userData.email"
+      [value]="userData[input.name]"
       [name]="input.name"
       [type]="input.type"
       [placeholder]="input.placeholder"
     ></app-input>
-    <mat-form-field class="field-full-width" *ngIf="userData.description">
-      <textarea [(ngModel)]="userData.description" name="description" matInput placeholder="password"></textarea>
-    </mat-form-field>
+    <app-textarea
+      *ngFor="let textarea of textareas"
+      (changeEvent)="handleChange($event)"
+      [value]="userData[textarea.name]"
+      [name]="textarea.name"
+      [placeholder]="textarea.placeholder"
+    ></app-textarea>
     <button mat-raised-button color="primary" (click)="handleSubmit()">{{ submitBtnValue }}</button>
   </form>
 </mat-card>

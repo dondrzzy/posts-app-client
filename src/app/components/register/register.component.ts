@@ -16,6 +16,7 @@ export class RegisterComponent implements OnInit {
   }
   formTitle = 'Register Form';
   submitBtnValue = 'Register';
+
   userData: User = {
     email: '',
     password: '',
@@ -23,12 +24,45 @@ export class RegisterComponent implements OnInit {
     name: '',
   };
 
+  inputs = [
+    {
+      name: 'name',
+      placeholder: 'name',
+      type: 'text',
+    },
+    {
+      name: 'email',
+      placeholder: 'email address',
+      type: 'email',
+    },
+    {
+      name: 'password',
+      placeholder: 'password',
+      type: 'password',
+    },
+  ];
+  textareas = [
+    {
+      name: 'description',
+      placeholder: 'description',
+    },
+  ];
+
+  clearFormdata = () => {
+    this.userData = {
+      email: '',
+      password: '',
+      description: '',
+      name: '',
+    };
+  }
+
   registerUser($userData) {
     console.log('register data', $userData);
     console.log('initial data', this.userData);
     this.userService.registerUser($userData)
       .subscribe(
-        res => console.log('userRes', res),
+        res => this.clearFormdata(),
         error => console.log('s-error', error.json())
       );
   }
