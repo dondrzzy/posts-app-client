@@ -1,6 +1,8 @@
 <mat-card>
   <mat-card-title>Profile</mat-card-title>
   <mat-list>
-    <mat-list-item> Email: {{ userProfile.email }}</mat-list-item>
+    <mat-list-item> Name: {{ userProfile?.name }}</mat-list-item>
+    <mat-list-item> Email: {{ userProfile?.email }}</mat-list-item>
+    <mat-list-item> Descriotion: {{ userProfile?.description }}</mat-list-item>
   </mat-list>
 </mat-card>

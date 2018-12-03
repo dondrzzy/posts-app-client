@@ -13,7 +13,6 @@ export class CardComponent implements OnInit {
   @Input() user;
 
   ngOnInit() {
-    console.log(this.user)
   }
 
 }
