@@ -16,12 +16,37 @@ export class RegisterComponent implements OnInit {
   }
   formTitle = 'Register Form';
   submitBtnValue = 'Register';
+
   userData: User = {
     email: '',
     password: '',
     description: '',
     name: '',
   };
+
+  inputs = [
+    {
+      name: 'name',
+      placeholder: 'name',
+      type: 'text',
+    },
+    {
+      name: 'email',
+      placeholder: 'email address',
+      type: 'email',
+    },
+    {
+      name: 'password',
+      placeholder: 'password',
+      type: 'password',
+    },
+  ];
+  textareas = [
+    {
+      name: 'description',
+      placeholder: 'description',
+    },
+  ];
 
   registerUser($userData) {
     console.log('register data', $userData);

@@ -1,0 +1,8 @@
+<mat-form-field class="field-full-width">
+  <textarea
+    [(ngModel)]="value"
+    (ngModelChange)="handleChange()"
+    [name]="name"
+    matInput
+    [placeholder]="placeholder">{{ value }}</textarea>
+</mat-form-field>

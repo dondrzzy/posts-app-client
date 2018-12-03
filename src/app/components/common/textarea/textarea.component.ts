@@ -1,19 +1,17 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-input',
-  templateUrl: './input.component.html',
-  styleUrls: ['./input.component.css']
+  selector: 'app-textarea',
+  templateUrl: './textarea.component.html',
+  styleUrls: ['./textarea.component.css']
 })
-export class InputComponent implements OnInit {
+export class TextareaComponent implements OnInit {
 
   constructor() { }
 
-  @Input() value;
   @Input() name;
-  @Input() type;
+  @Input() value;
   @Input() placeholder;
-
   @Output() changeEvent = new EventEmitter();
 
   ngOnInit() {
@@ -25,4 +23,5 @@ export class InputComponent implements OnInit {
       name: this.name,
     });
   }
+
 }

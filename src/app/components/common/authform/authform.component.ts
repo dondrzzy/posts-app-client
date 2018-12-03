@@ -16,24 +16,8 @@ export class AuthformComponent implements OnInit {
   @Input() userData;
   @Input() formTitle;
   @Input() submitBtnValue;
-
-  inputs = [
-    {
-      name: 'name',
-      placeholder: 'name',
-      type: 'text',
-    },
-    {
-      name: 'email',
-      placeholder: 'email address',
-      type: 'email',
-    },
-    {
-      name: 'password',
-      placeholder: 'password',
-      type: 'password',
-    },
-  ];
+  @Input() inputs;
+  @Input() textareas;
 
   value = 'ks dsds'
 

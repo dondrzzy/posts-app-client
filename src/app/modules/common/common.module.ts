@@ -12,6 +12,7 @@ import {
 import { AuthformComponent } from './../../components/common/authform/authform.component';
 import { CardComponent } from '../../components/common/card/card.component';
 import { InputComponent } from './../../components/common/input/input.component';
+import { TextareaComponent } from './../../components/common/textarea/textarea.component';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { InputComponent } from './../../components/common/input/input.component'
     MatCardModule,
     MatInputModule,
   ],
-  declarations: [AuthformComponent, CardComponent, InputComponent],
+  declarations: [AuthformComponent, CardComponent, InputComponent, TextareaComponent],
   exports: [AuthformComponent, CardComponent],
 })
 export class CommonModule { }
