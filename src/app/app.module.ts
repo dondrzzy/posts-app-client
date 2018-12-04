@@ -21,6 +21,8 @@ import { Routing } from './app.routing';
 import { LoginComponent } from './components/login/login.component';
 import { UsersComponent } from './components/users/users.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { PostsComponent } from './components/posts/posts.component';
+// import { PostformComponent } from './components/common/postform/postform.component';
 // import { TextareaComponent } from './components/common/textarea/textarea.component';
 // import { InputComponent } from './components/common/input/input.component';
 // import { CardComponent } from './components/common/card/card.component';
@@ -37,6 +39,8 @@ CommonModule
     LoginComponent,
     UsersComponent,
     ProfileComponent,
+    PostsComponent,
+    // PostformComponent,
     // TextareaComponent,
     // InputComponent,
     // CardComponent,

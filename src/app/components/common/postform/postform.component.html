@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-title>{{ formTitle }}</mat-card-title>
+  <form class="post-form">
+    <app-input
+      *ngFor="let input of inputs"
+      (changeEvent)="handleChange($event)"
+      [value]="postData[input.name]"
+      [name]="input.name"
+      [type]="input.type"
+      [placeholder]="input.placeholder"
+    ></app-input>
+    <button mat-raised-button color="primary" (click)="handleSubmit()">{{ submitBtnValue }}</button>
+  </form>
+</mat-card>
