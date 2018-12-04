@@ -15,7 +15,7 @@ export class UserService {
   users = [];
   userProfile = {};
 
-  private getAuthenticationHeaders = () => {
+  private createAuthenticationHeaders = () => {
     const headers = new Headers();
     headers.append('Content-Type', 'application/json')
     this.options = {headers}
@@ -29,7 +29,7 @@ export class UserService {
   }
 
   registerUser = (userData) => {
-    this.getAuthenticationHeaders();
+    this.createAuthenticationHeaders();
     return this.http.post(`${this.baseUrl}/users/register`, JSON.stringify(userData), this.options)
       .pipe(
         map(res => res.json()),
@@ -38,7 +38,7 @@ export class UserService {
   };
 
   loginUser = (user) => {
-    this.getAuthenticationHeaders();
+    this.createAuthenticationHeaders();
     this.http.post(`${this.baseUrl}/users/login`, JSON.stringify(user), this.options)
       .pipe(
         map(res => res.json()),

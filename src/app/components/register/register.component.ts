@@ -61,7 +61,7 @@ export class RegisterComponent implements OnInit {
   registerUser($userData) {
     this.userService.registerUser($userData)
       .subscribe(
-        res => this.clearFormdata()
+        res => console.log('res', res)
       );
   }
 

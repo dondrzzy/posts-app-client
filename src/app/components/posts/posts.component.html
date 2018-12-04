@@ -1,0 +1,10 @@
+<app-postform
+  [formTitle]="formTitle"
+  [submitBtnValue]="submitBtnValue"
+  [postData]="postData"
+  [inputs]="inputs"
+  (submitEvent)="postMessage($event)"
+></app-postform>
+<div *ngFor="let post of postService.posts">
+  <p>{{ post.message }}</p>
+</div>
